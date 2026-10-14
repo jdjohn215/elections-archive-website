@@ -1,0 +1,35 @@
+# Build & data regeneration scripts (local development only)
+write-geoparquet.R
+update-metadata.R
+
+# Source election data (before being copied to data/)
+election-results/
+
+# RStudio files
+.Rproj.user/
+*.Rproj
+
+# Project memory & planning (local reference)
+AGENTS.md
+PLAN.md
+
+# System files
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
+# Node/package manager (if any)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python cache (if any)
+__pycache__/
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo

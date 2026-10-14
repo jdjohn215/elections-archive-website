@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wisconsin Elections Archive</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@^4/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside id="sidebar">
+    <div id="sidebar-header">
+      <h1>Wisconsin Elections Archive</h1>
+      <button id="sidebar-toggle" title="Collapse sidebar" aria-label="Collapse sidebar">&laquo;</button>
+    </div>
+    <div class="filter">
+      <label for="year">Year</label>
+      <select id="year" disabled></select>
+    </div>
+    <div class="filter">
+      <label for="month">Election</label>
+      <select id="month" disabled></select>
+    </div>
+    <div class="filter">
+      <label for="level">Aggregation level</label>
+      <select id="level" disabled></select>
+    </div>
+    <div class="filter">
+      <label for="contest">Contest</label>
+      <div class="combobox">
+        <input id="contest" type="text" autocomplete="off" spellcheck="false"
+               placeholder="Type to filter contests…" disabled />
+        <div id="contest-list" class="combobox-list" hidden></div>
+      </div>
+    </div>
+    <div id="status">Loading database…</div>
+  </aside>
+
+  <main>
+    <nav id="tabs">
+      <button class="tab active" data-tab="map">Map</button>
+      <button class="tab" data-tab="table">Table</button>
+      <button class="tab" data-tab="compare">Comparison Tables</button>
+      <button class="tab" data-tab="about">About</button>
+    </nav>
+    <section id="panel-map" class="panel active">
+      <div id="map"></div>
+      <div id="legend">
+        <button id="legend-toggle" class="legend-title">Candidates <span id="legend-chevron">&#9662;</span></button>
+        <div id="legend-body"></div>
+      </div>
+    </section>
+    <section id="panel-table" class="panel">
+      <div id="unit-filter">
+        <label for="unit">Unit</label>
+        <div class="combobox">
+          <input id="unit" type="text" autocomplete="off" spellcheck="false"
+                 placeholder="All units (type to filter…)" />
+          <div id="unit-list" class="combobox-list" hidden></div>
+        </div>
+      </div>
+      <div id="unit-context" hidden></div>
+      <table id="summary">
+        <thead>
+          <tr><th>Candidate</th><th>Party</th><th class="num">Votes</th><th class="num">%</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <section id="panel-compare" class="panel">
+      <div id="compare-controls">
+        <div class="compare-modes">
+          <label><input type="radio" name="compare-mode" value="contest" checked />
+            Single contest across geographies</label>
+          <label><input type="radio" name="compare-mode" value="geography" />
+            Multiple contests for a single geography (November only)</label>
+        </div>
+        <div id="compare-contest-controls">
+          <div class="compare-note" id="compare-context"></div>
+          <div class="compare-filter">
+            <label for="compare-geo-filter">Filter geographies</label>
+            <input id="compare-geo-filter" type="text" autocomplete="off"
+                   placeholder="Type to filter rows…" />
+          </div>
+        </div>
+        <div id="compare-geography-controls" hidden>
+          <div class="compare-controls-row">
+            <div class="compare-field">
+              <label for="compare-level">Geography</label>
+              <select id="compare-level"></select>
+            </div>
+            <div class="compare-field" id="compare-unit-wrap">
+              <label for="compare-unit">Unit</label>
+              <div class="combobox">
+                <input id="compare-unit" type="text" autocomplete="off" spellcheck="false"
+                       placeholder="Type to filter units…" />
+                <div id="compare-unit-list" class="combobox-list" hidden></div>
+              </div>
+            </div>
+          </div>
+          <div class="compare-filter">
+            <label for="compare-contest-filter">Filter contests</label>
+            <input id="compare-contest-filter" type="text" autocomplete="off"
+                   placeholder="All contests (type to filter, e.g. president)…" />
+          </div>
+          <div class="compare-note">November general elections, all available years.</div>
+          <div class="compare-note">
+            These results are <em>nominally</em> integrated, meaning they show the
+            results of votes cast within the boundaries as they existed at the time
+            of the election. County boundaries remain stable. Municipality and minor
+            civil division boundaries change rarely. Legislative districts were
+            substantially redrawn before the 2002, 2012, 2022, and 2024 elections.
+            Refer to the Map tab to view the boundaries as they existed during each
+            election.
+          </div>
+        </div>
+        <div id="compare-status"></div>
+      </div>
+      <table id="compare-table" class="data-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <section id="panel-about" class="panel">
+      <div id="about-content">Loading…</div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/maplibre-gl@^4/dist/maplibre-gl.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
