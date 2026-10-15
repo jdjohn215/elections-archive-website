@@ -111,7 +111,7 @@ function popupHTML(props) {
       (c) => `<tr>
         <td>${escapeHtml(c.candidate)}</td>
         <td>${escapeHtml(c.party)}</td>
-        <td class="num">${c.votes.toLocaleString()}</td>
+        <td class="num">${Math.round(c.votes).toLocaleString()}</td>
         <td class="num">${c.pct.toFixed(1)}%</td>
       </tr>`
     )
@@ -123,7 +123,7 @@ function popupHTML(props) {
   return `<h3>${escapeHtml(props.name)}</h3>
     <table>${rows}</table>
     ${more}
-    <div style="margin-top:4px;color:#777">Total: ${props.total.toLocaleString()} votes</div>`;
+    <div style="margin-top:4px;color:#777">Total: ${Math.round(props.total).toLocaleString()} votes</div>`;
 }
 
 function escapeHtml(s) {

@@ -19,7 +19,7 @@ export function updateTable(votes) {
   for (const r of rows) {
     const tr = document.createElement("tr");
     const pct = grand > 0 ? ((r.votes / grand) * 100).toFixed(1) : "0.0";
-    tr.innerHTML = `<td></td><td></td><td class="num">${r.votes.toLocaleString()}</td><td class="num">${pct}%</td>`;
+    tr.innerHTML = `<td></td><td></td><td class="num">${Math.round(r.votes).toLocaleString()}</td><td class="num">${pct}%</td>`;
     tr.children[0].textContent = r.candidate;
     tr.children[1].textContent = r.party;
     tbody.appendChild(tr);

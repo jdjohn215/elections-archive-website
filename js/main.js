@@ -123,7 +123,8 @@ async function load(state) {
       compare?.activate(currentState, lastVotes);
     }
     setStatus(
-      `${state.contest} — ${state.month} ${state.year}, ${state.level} level ` +
+      `${state.contest} — ${state.month} ${state.year}, ${state.level} level, ` +
+      `${state.integration === "spatial" ? "spatially" : "nominally"} integrated ` +
       `(${geo.length.toLocaleString()} units)`
     );
   } catch (err) {

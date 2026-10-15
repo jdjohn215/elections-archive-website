@@ -67,16 +67,17 @@ export function countyName(fips) {
   return COUNTY_NAMES[fips] ?? String(fips);
 }
 
-export function votesPath(level, year, month) {
-  return `data/votes/aggregation_level=${level}/year=${year}/month=${month}/part-0.parquet`;
+export function votesPath(level, year, month, integration = "nominal") {
+  const root = integration === "spatial" ? "data/votes-integrated" : "data/votes";
+  return `${root}/aggregation_level=${level}/year=${year}/month=${month}/part-0.parquet`;
 }
 
 export function keyOf(row, keys) {
   return keys.map((k) => String(row[k])).join("|");
 }
 
-export async function fetchContests({ year, month, level }) {
-  const path = dataUrl(votesPath(level, year, month));
+export async function fetchContests({ year, month, level, integration }) {
+  const path = dataUrl(votesPath(level, year, month, integration));
   const rows = await query(
     `SELECT DISTINCT contest FROM read_parquet('${path}') ORDER BY contest`
   );
@@ -104,8 +105,8 @@ export function loadUnitNames() {
   return unitNamesPromise;
 }
 
-export async function fetchVotes({ year, month, level, contest }) {
-  const path = dataUrl(votesPath(level, year, month));
+export async function fetchVotes({ year, month, level, contest, integration }) {
+  const path = dataUrl(votesPath(level, year, month, integration));
   const rows = await query(
     `SELECT county_fips, muni_fips, mcd_fips, reporting_unit,
             con_dist, wss_dist, wsa_dist,
@@ -129,9 +130,13 @@ export async function fetchVotes({ year, month, level, contest }) {
   return rows;
 }
 
-export async function fetchGeo({ year, month, level }) {
+export async function fetchGeo({ year, month, level, integration }) {
   const cfg = LEVELS[level];
-  const where = cfg.static ? "" : `WHERE year = ${year} AND month = ${sqlString(month)}`;
+  // Spatial integration uses one static boundary set per level (August 2026
+  // vintage); county is static under both integrations.
+  const spatial = integration === "spatial" && !cfg.static;
+  const geoFile = spatial ? "geo/spatial/" + cfg.geo : "geo/" + cfg.geo;
+  const where = cfg.static || spatial ? "" : `WHERE year = ${year} AND month = ${sqlString(month)}`;
   // FIPS/district ids are integers stored as DOUBLE or VARCHAR depending on
   // the file; normalize via BIGINT so JS join keys are plain "55001"-style
   // strings on both sides.
@@ -141,7 +146,7 @@ export async function fetchGeo({ year, month, level }) {
   const rows = await query(
     `SELECT ${keySelect},
             ST_AsGeoJSON(ST_GeomFromWKB(geometry)) AS gj
-     FROM read_parquet('${dataUrl("data/geo/" + cfg.geo)}')
+     FROM read_parquet('${dataUrl("data/" + geoFile)}')
      ${where}`
   );
   return rows;
@@ -166,7 +171,11 @@ export function parseHash() {
   const contest = p.get("contest");
   if (!year || !month || !level || !contest) return null;
   // Optional: table filtered to a single unit (keyOf-style key)
-  return { year, month, level, contest, unit: p.get("unit") };
+  return {
+    year, month, level, contest,
+    integration: p.get("integration") === "spatial" ? "spatial" : "nominal",
+    unit: p.get("unit"),
+  };
 }
 
 export function stateToHash(s) {
@@ -176,11 +185,14 @@ export function stateToHash(s) {
     level: s.level,
     contest: s.contest,
   };
+  // Omit when nominal so existing shared links stay valid
+  if (s.integration === "spatial") params.integration = "spatial";
   if (s.unit) params.unit = s.unit;
   return "#" + new URLSearchParams(params).toString();
 }
 
-// Populate cascading selects from metadata triples [{level, year, month}]
+// Populate cascading selects from metadata entries
+// [{integration, level, year, month}]
 export function setupFilters(metadata, onChange, initial = null) {
   const els = {
     year: document.getElementById("year"),
@@ -188,6 +200,7 @@ export function setupFilters(metadata, onChange, initial = null) {
     level: document.getElementById("level"),
     contest: document.getElementById("contest"),
     contestList: document.getElementById("contest-list"),
+    integration: [...document.querySelectorAll('input[name="integration"]')],
   };
 
   const setOptions = (sel, values, current) => {
@@ -283,18 +296,27 @@ export function setupFilters(metadata, onChange, initial = null) {
   });
 
   const state = initial ? { ...initial } : {};
+  state.integration ??= "nominal";
+
+  function syncIntegrationRadios() {
+    for (const r of els.integration) r.checked = r.value === state.integration;
+  }
+  syncIntegrationRadios();
 
   async function refresh(keepContest = false) {
-    const years = [...new Set(metadata.map((m) => m.year))].sort((a, b) => b - a);
+    // Availability is computed within the active integration mode
+    const md = metadata.filter((m) => m.integration === state.integration);
+
+    const years = [...new Set(md.map((m) => m.year))].sort((a, b) => b - a);
     setOptions(els.year, years, state.year);
     state.year = Number(els.year.value);
 
-    const months = [...new Set(metadata.filter((m) => m.year === state.year).map((m) => m.month))]
+    const months = [...new Set(md.filter((m) => m.year === state.year).map((m) => m.month))]
       .sort((a, b) => MONTH_ORDER[a] - MONTH_ORDER[b]);
     setOptions(els.month, months, state.month);
     state.month = els.month.value;
 
-    const levels = [...new Set(metadata
+    const levels = [...new Set(md
       .filter((m) => m.year === state.year && m.month === state.month)
       .map((m) => m.level))];
     setOptions(els.level, levels, state.level);
@@ -316,6 +338,14 @@ export function setupFilters(metadata, onChange, initial = null) {
   // Keep every downstream selection when changing a filter; setOptions
   // already falls back to the first option if the kept value isn't valid
   // for the new context (e.g. a month with no election that year).
+  for (const r of els.integration) {
+    r.addEventListener("change", async () => {
+      if (!r.checked || r.value === state.integration) return;
+      state.integration = r.value;
+      await refresh(true);
+      onChange(state);
+    });
+  }
   els.year.addEventListener("change", async () => {
     state.year = Number(els.year.value);
     await refresh(true);
@@ -344,6 +374,7 @@ export function setupFilters(metadata, onChange, initial = null) {
   // back/forward navigation). Invalid values fall back per setOptions.
   async function apply(next) {
     Object.assign(state, next);
+    syncIntegrationRadios();
     await refresh(true);
     return state;
   }

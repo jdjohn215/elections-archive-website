@@ -1,1110 +1,2472 @@
 [
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2000,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2002,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2004,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2006,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2008,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2010,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2012,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2014,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2016,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2016,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2018,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2018,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2020,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2020,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2022,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2022,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2024,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2024,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "congressional district",
     "year": 2026,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2000,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2000,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2001,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2002,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2003,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2004,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2005,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2006,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2006,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2007,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2008,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2008,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2009,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2010,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2011,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2012,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2012,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2013,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2014,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2015,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2016,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2016,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2016,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2017,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2017,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2018,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2018,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2018,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2018,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2019,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2020,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2020,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2020,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2021,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2021,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2022,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2022,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2023,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2023,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2024,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2024,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2024,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2025,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2025,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2026,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "county",
     "year": 2026,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2000,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2000,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2001,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2002,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2003,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2004,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2005,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2006,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2006,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2007,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2008,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2008,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2009,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2010,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2011,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2012,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2012,
     "month": "JUNE"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2012,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2013,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2014,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2015,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2016,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2016,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2016,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2017,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2017,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2018,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2018,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2018,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2018,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2019,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2020,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2020,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2020,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2021,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2021,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2022,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2022,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2023,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2023,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2024,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2024,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2024,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2025,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2025,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2026,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "minor civil division",
     "year": 2026,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2000,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2000,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2001,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2002,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2003,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2004,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2005,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2006,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2006,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2007,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2008,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2008,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2009,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2010,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2011,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2012,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2012,
     "month": "JUNE"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2012,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2013,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2014,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2015,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2016,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2016,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2016,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2017,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2017,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2018,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2018,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2018,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2018,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2019,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2020,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2020,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2020,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2021,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2021,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2022,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2022,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2023,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2023,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2024,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2024,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2024,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2025,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2025,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2026,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "municipality",
     "year": 2026,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2016,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2016,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2016,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2017,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2017,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2018,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2018,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2018,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2018,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2019,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2020,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2020,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2020,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2021,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2021,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2022,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2022,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2023,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2023,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2024,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2024,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2025,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2025,
     "month": "FEBRUARY"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2026,
     "month": "APRIL"
   },
   {
+    "integration": "nominal",
     "level": "reporting unit",
     "year": 2026,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2000,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2002,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2004,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2006,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2008,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2010,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2012,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2014,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2016,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2016,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2018,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2018,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2020,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2020,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2022,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2022,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2024,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2024,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state assembly district",
     "year": 2026,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2000,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2002,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2004,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2006,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2008,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2010,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2012,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2014,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2016,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2016,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2018,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2018,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2020,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2020,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2022,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2022,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2024,
     "month": "AUGUST"
   },
   {
+    "integration": "nominal",
     "level": "state senate district",
     "year": 2024,
     "month": "NOVEMBER"
   },
   {
+    "integration": "nominal",
+    "level": "state senate district",
+    "year": 2026,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2016,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2016,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2016,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2017,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2017,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2018,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2018,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2018,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2018,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2019,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2020,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2020,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2021,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2021,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2022,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2022,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2023,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2023,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2024,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2024,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2025,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2025,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2026,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "congressional district",
+    "year": 2026,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2000,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2000,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2001,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2002,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2003,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2004,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2005,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2006,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2006,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2007,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2008,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2008,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2009,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2010,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2011,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2012,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2012,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2013,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2014,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2015,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2016,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2016,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2016,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2017,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2017,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2018,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2018,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2018,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2018,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2019,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2020,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2020,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2020,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2021,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2021,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2022,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2022,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2023,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2023,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2024,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2024,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2024,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2025,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2025,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2026,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "county",
+    "year": 2026,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2016,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2016,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2016,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2017,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2017,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2018,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2018,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2018,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2018,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2019,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2020,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2020,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2021,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2021,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2022,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2022,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2023,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2023,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2024,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2024,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2025,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2025,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2026,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "minor civil division",
+    "year": 2026,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2016,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2016,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2016,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2017,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2017,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2018,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2018,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2018,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2018,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2019,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2020,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2020,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2021,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2021,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2022,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2022,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2023,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2023,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2024,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2024,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2025,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2025,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2026,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "municipality",
+    "year": 2026,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2016,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2016,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2016,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2017,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2017,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2018,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2018,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2018,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2018,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2019,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2020,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2020,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2021,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2021,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2022,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2022,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2023,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2023,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2024,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2024,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2025,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2025,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2026,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "reporting unit",
+    "year": 2026,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2016,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2016,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2016,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2017,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2017,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2018,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2018,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2018,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2018,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2019,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2020,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2020,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2021,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2021,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2022,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2022,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2023,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2023,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2024,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2024,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2025,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2025,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2026,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state assembly district",
+    "year": 2026,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2016,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2016,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2016,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2017,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2017,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2018,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2018,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2018,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2018,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2019,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2020,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2020,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2021,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2021,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2022,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2022,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2023,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2023,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2024,
+    "month": "AUGUST"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2024,
+    "month": "NOVEMBER"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2025,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2025,
+    "month": "FEBRUARY"
+  },
+  {
+    "integration": "spatial",
+    "level": "state senate district",
+    "year": 2026,
+    "month": "APRIL"
+  },
+  {
+    "integration": "spatial",
     "level": "state senate district",
     "year": 2026,
     "month": "AUGUST"

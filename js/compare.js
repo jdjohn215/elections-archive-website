@@ -133,7 +133,8 @@ export function setupComparison({ metadata }) {
     const { keys, label } = LEVELS[lastState.level];
     els.table.classList.add("mode-contest");
     els.context.textContent =
-      `${lastState.contest} — ${lastState.month} ${lastState.year}, ${lastState.level} level. ` +
+      `${lastState.contest} — ${lastState.month} ${lastState.year}, ${lastState.level} level, ` +
+      `${lastState.integration === "spatial" ? "spatially" : "nominally"} integrated. ` +
       `Change the sidebar filters to update this table.`;
 
     const units = new Map();
@@ -161,7 +162,7 @@ export function setupComparison({ metadata }) {
           label: "Total votes",
           num: true,
           value: (r) => r.total,
-          render: (r) => r.total.toLocaleString(),
+          render: (r) => Math.round(r.total).toLocaleString(),
         },
         ...cands.map((c) => ({
           key: "pct:" + c,
@@ -196,10 +197,13 @@ export function setupComparison({ metadata }) {
   }
   els.unitWrap.hidden = els.level.value === "statewide";
 
+  const integration = () => lastState?.integration ?? "nominal";
+
   const novemberYears = (votesLevel) =>
     [...new Set(
       metadata
-        .filter((m) => m.level === votesLevel && m.month === "NOVEMBER")
+        .filter((m) => m.integration === integration() &&
+                       m.level === votesLevel && m.month === "NOVEMBER")
         .map((m) => m.year)
     )].sort((a, b) => b - a);
 
@@ -210,6 +214,23 @@ export function setupComparison({ metadata }) {
       return Object.entries(COUNTY_NAMES)
         .map(([fips, name]) => ({ key: fips, label: `${name} County` }))
         .sort((a, b) => a.label.localeCompare(b.label));
+    }
+    if (integration() === "spatial") {
+      // Spatially integrated files carry unit names at the August 2026
+      // vintage; enumerate them from the most recent November file.
+      const years = novemberYears(cfg.votesLevel);
+      if (years.length === 0) return [];
+      const url = dataUrl(votesPath(cfg.votesLevel, years[0], "NOVEMBER", "spatial"));
+      const rows = await query(
+        `SELECT DISTINCT ${cfg.key} AS k, municipality, ctv, county_fips
+         FROM read_parquet('${url}') ORDER BY k`
+      );
+      return rows.map((n) => ({
+        key: String(n.k),
+        label:
+          `${n.ctv || ""} ${n.municipality ?? ""}`.trim() +
+          (cfg.key === "mcd_fips" ? `, ${countyName(n.county_fips)}` : ""),
+      })).sort((a, b) => a.label.localeCompare(b.label));
     }
     if (levelName === "municipality" || levelName === "minor civil division") {
       const { byMuni, byMcd } = await loadUnitNames();
@@ -227,7 +248,7 @@ export function setupComparison({ metadata }) {
     // District levels: enumerate ids from the most recent November file.
     const years = novemberYears(cfg.votesLevel);
     if (years.length === 0) return [];
-    const url = dataUrl(votesPath(cfg.votesLevel, years[0], "NOVEMBER"));
+    const url = dataUrl(votesPath(cfg.votesLevel, years[0], "NOVEMBER", integration()));
     const rows = await query(
       `SELECT DISTINCT ${cfg.key} AS k FROM read_parquet('${url}') ORDER BY k`
     );
@@ -257,7 +278,7 @@ export function setupComparison({ metadata }) {
     try {
       for (let i = 0; i < years.length; i++) {
         setStatus(`Loading November ${years[i]} (${i + 1}/${years.length})…`);
-        const url = dataUrl(votesPath(cfg.votesLevel, years[i], "NOVEMBER"));
+        const url = dataUrl(votesPath(cfg.votesLevel, years[i], "NOVEMBER", integration()));
         const where = cfg.key ? `WHERE ${cfg.key} = ${Number(unitKey)}` : "";
         const part = await query(
           `SELECT contest,
@@ -298,7 +319,7 @@ export function setupComparison({ metadata }) {
           label: "Total votes",
           num: true,
           value: (r) => r.total,
-          render: (r) => r.total.toLocaleString(),
+          render: (r) => Math.round(r.total).toLocaleString(),
         },
         {
           key: "dem",
@@ -388,12 +409,66 @@ export function setupComparison({ metadata }) {
     });
   }
 
+  const INTEGRATION_NOTES = {
+    nominal:
+      "These results are nominally integrated, meaning they show the results of " +
+      "votes cast within the boundaries as they existed at the time of the election. " +
+      "County boundaries remain stable. Municipality and minor civil division " +
+      "boundaries change rarely. Legislative districts were substantially redrawn " +
+      "before the 2002, 2012, 2022, and 2024 elections. Refer to the Map tab to view " +
+      "the boundaries as they existed during each election.",
+    spatial:
+      "These results are spatially integrated: past election results are allocated " +
+      "into August 2026 boundaries based on validated voter overlap. Available for " +
+      "statewide contests only; sub-county levels cover 2016 and later. County " +
+      "totals (and recent legislative-district elections whose boundaries are " +
+      "unchanged since) use official results.",
+  };
+
+  // Note: `state` is the same object across calls (main.js mutates it), so
+  // integration changes must be detected via a separate local.
+  let lastIntegration = null;
+
   return {
     // Called when the tab is shown and after each filter-driven data load.
-    activate(state, votes) {
+    async activate(state, votes) {
+      const integrationChanged =
+        lastIntegration !== null && state && lastIntegration !== state.integration;
+      lastIntegration = state?.integration ?? "nominal";
       lastState = state;
       lastVotes = votes;
-      if (mode === "contest") renderContestMode();
+      document.getElementById("compare-integration-note").textContent =
+        INTEGRATION_NOTES[state?.integration ?? "nominal"];
+      if (mode === "contest") {
+        renderContestMode();
+        return;
+      }
+      // Geography mode's year list and unit options depend on the
+      // integration mode; rebuild, keeping the selected unit when its key
+      // exists in the new vintage.
+      if (!integrationChanged) return;
+      const levelName = els.level.value;
+      if (levelName === "statewide") {
+        runGeographyMode();
+        return;
+      }
+      const keepUnit = unitFilter.value();
+      try {
+        setStatus("Loading units…");
+        const opts = await unitOptionsFor(levelName);
+        unitFilter.setOptions(opts);
+        if (keepUnit != null && opts.some((o) => o.key === keepUnit)) {
+          unitFilter.set(keepUnit);
+          runGeographyMode();
+        } else {
+          unitFilter.set(null);
+          clearTable();
+          setStatus("Select a unit above to build the table.");
+        }
+      } catch (err) {
+        console.error(err);
+        setStatus(`Error loading units: ${err.message}`, true);
+      }
     },
   };
 }

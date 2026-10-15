@@ -13,6 +13,21 @@
       <h1>Wisconsin Elections Archive</h1>
       <button id="sidebar-toggle" title="Collapse sidebar" aria-label="Collapse sidebar">&laquo;</button>
     </div>
+    <fieldset class="filter" id="integration">
+      <legend>Integration</legend>
+      <label>
+        <input type="radio" name="integration" value="nominal" checked />
+        Nominal
+        <span class="hint" tabindex="0"
+              data-tip="Election results are shown in the geographic boundaries as they existed during each election.">?</span>
+      </label>
+      <label>
+        <input type="radio" name="integration" value="spatial" />
+        Spatial
+        <span class="hint" tabindex="0"
+              data-tip="Past election results are allocated into August 2026 boundaries based on validated voter overlap. Available for fewer years &amp; contests (statewide contests only, 2016 and later for sub-county levels).">?</span>
+      </label>
+    </fieldset>
     <div class="filter">
       <label for="year">Year</label>
       <select id="year" disabled></select>
@@ -104,15 +119,7 @@
                    placeholder="All contests (type to filter, e.g. president)…" />
           </div>
           <div class="compare-note">November general elections, all available years.</div>
-          <div class="compare-note">
-            These results are <em>nominally</em> integrated, meaning they show the
-            results of votes cast within the boundaries as they existed at the time
-            of the election. County boundaries remain stable. Municipality and minor
-            civil division boundaries change rarely. Legislative districts were
-            substantially redrawn before the 2002, 2012, 2022, and 2024 elections.
-            Refer to the Map tab to view the boundaries as they existed during each
-            election.
-          </div>
+          <div class="compare-note" id="compare-integration-note"></div>
         </div>
         <div id="compare-status"></div>
       </div>

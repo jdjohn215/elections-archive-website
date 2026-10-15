@@ -1,13 +1,16 @@
 # Build & data regeneration scripts (local development only)
 write-geoparquet.R
+write-spatial-parquet.R
 update-metadata.R
 
 # Source election data (before being copied to data/)
 election-results/
+spatial-integration/
 
 # RStudio files
 .Rproj.user/
 *.Rproj
+.Rhistory
 
 # Project memory & planning (local reference)
 AGENTS.md
