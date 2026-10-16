@@ -51,7 +51,7 @@ export async function parquetRef(path) {
   if (parquetCache.size >= PARQUET_CACHE_MAX) {
     const [oldPath, oldName] = parquetCache.entries().next().value;
     parquetCache.delete(oldPath);
-    db.unregisterFileBuffer(oldName);
+    await db.dropFile(oldName);
   }
   parquetCache.set(path, name);
   return name;
