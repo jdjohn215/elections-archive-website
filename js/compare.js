@@ -8,6 +8,24 @@ import { setupUnitFilter } from "./table.js";
 //  - "geography": one geography unit across all November elections/years,
 //                 one row per contest with Dem/Rep/Other vote shares.
 
+// Helper: check if a municipality type is a town (towns are county-unique by name).
+function isTown(ctv) {
+  return ctv === "T";
+}
+
+// Format municipality label: always include CTV code (C/T/V), and include
+// county name for towns (since town names are unique only within counties).
+// Cities and villages can cross county lines, so they don't include county
+// in the label.
+function municipalityLabel(ctv, municipality, countyFips) {
+  const displayName = municipality ?? "Unknown";
+  const ctvLabel = ctv || "?";
+  if (isTown(ctv)) {
+    return `${ctvLabel} ${displayName}, ${countyName(countyFips)}`;
+  }
+  return `${ctvLabel} ${displayName}`;
+}
+
 const GEO_LEVELS = {
   statewide: { votesLevel: "county", key: null, label: "Statewide" },
   county: { votesLevel: "county", key: "county_fips", label: "County" },
@@ -215,34 +233,45 @@ export function setupComparison({ metadata }) {
         .map(([fips, name]) => ({ key: fips, label: `${name} County` }))
         .sort((a, b) => a.label.localeCompare(b.label));
     }
-    if (integration() === "spatial") {
-      // Spatially integrated files carry unit names at the August 2026
-      // vintage; enumerate them from the most recent November file.
-      const years = novemberYears(cfg.votesLevel);
-      if (years.length === 0) return [];
-      const url = dataUrl(votesPath(cfg.votesLevel, years[0], "NOVEMBER", "spatial"));
-      const rows = await query(
-        `SELECT DISTINCT ${cfg.key} AS k, municipality, ctv, county_fips
-         FROM read_parquet('${url}') ORDER BY k`
-      );
-      return rows.map((n) => ({
-        key: String(n.k),
-        label:
-          `${n.ctv || ""} ${n.municipality ?? ""}`.trim() +
-          (cfg.key === "mcd_fips" ? `, ${countyName(n.county_fips)}` : ""),
-      })).sort((a, b) => a.label.localeCompare(b.label));
-    }
     if (levelName === "municipality" || levelName === "minor civil division") {
+      if (integration() === "spatial") {
+        // Spatially integrated files carry unit names at the August 2026
+        // vintage; enumerate them from the most recent November file.
+        const years = novemberYears(cfg.votesLevel);
+        if (years.length === 0) return [];
+        const url = dataUrl(votesPath(cfg.votesLevel, years[0], "NOVEMBER", "spatial"));
+        const rows = await query(
+          `SELECT DISTINCT ${cfg.key} AS k, municipality, ctv, county_fips
+           FROM read_parquet('${url}') ORDER BY k`
+        );
+        const isMcd = levelName === "minor civil division";
+        return rows
+          .filter((n) => n.municipality) // Skip rows with null/empty municipality
+          .map((n) => {
+            const ctvLabel = n.ctv || "?";
+            const label = isMcd
+              ? `${ctvLabel} ${n.municipality}, ${countyName(n.county_fips)}`
+              : municipalityLabel(n.ctv, n.municipality, n.county_fips);
+            return { key: String(n.k), label };
+          })
+          .sort((a, b) => a.label.localeCompare(b.label));
+      }
+      // Nominal mode: use unit_names.parquet
       const { byMuni, byMcd } = await loadUnitNames();
       const isMcd = levelName === "minor civil division";
       const map = isMcd ? byMcd : byMuni;
       return [...map.values()]
-        .map((n) => ({
-          key: String(isMcd ? n.mcd_fips : n.muni_fips),
-          label:
-            `${n.ctv || ""} ${n.municipality ?? ""}`.trim() +
-            (isMcd ? `, ${countyName(n.county_fips)}` : ""),
-        }))
+        .filter((n) => n.municipality) // Skip rows with null/empty municipality
+        .map((n) => {
+          const ctvLabel = n.ctv || "?";
+          const label = isMcd
+            ? `${ctvLabel} ${n.municipality}, ${countyName(n.county_fips)}`
+            : municipalityLabel(n.ctv, n.municipality, n.county_fips);
+          return {
+            key: String(isMcd ? n.mcd_fips : n.muni_fips),
+            label,
+          };
+        })
         .sort((a, b) => a.label.localeCompare(b.label));
     }
     // District levels: enumerate ids from the most recent November file.

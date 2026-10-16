@@ -1,5 +1,23 @@
 import { query, dataUrl, sqlString } from "./db.js";
 
+// Helper: check if a municipality type is a town (towns are county-unique by name).
+function isTown(ctv) {
+  return ctv === "T";
+}
+
+// Format municipality label: always include CTV code (C/T/V), and include
+// county name for towns (since town names are unique only within counties).
+// Cities and villages can cross county lines, so they don't include county
+// in the label.
+function municipalityLabel(ctv, municipality, countyFips) {
+  const displayName = municipality ?? "Unknown";
+  const ctvLabel = ctv || "?";
+  if (isTown(ctv)) {
+    return `${ctvLabel} ${displayName}, ${countyName(countyFips)}`;
+  }
+  return `${ctvLabel} ${displayName}`;
+}
+
 export const LEVELS = {
   "county": {
     geo: "county.parquet",
@@ -10,13 +28,16 @@ export const LEVELS = {
   "municipality": {
     geo: "municipality.parquet",
     keys: ["muni_fips"],
-    label: (r) => `${r.ctv || ""} ${r.municipality ?? r.muni_fips}`.trim(),
+    label: (r) => municipalityLabel(r.ctv, r.municipality, r.county_fips),
   },
   "minor civil division": {
     geo: "minor_civil_division.parquet",
     keys: ["mcd_fips"],
-    label: (r) =>
-      `${r.ctv || ""} ${r.municipality ?? r.mcd_fips}`.trim() + ", " + countyName(r.county_fips),
+    label: (r) => {
+      const ctvLabel = r.ctv || "?";
+      const displayName = r.municipality ?? r.mcd_fips;
+      return `${ctvLabel} ${displayName}, ${countyName(r.county_fips)}`;
+    },
   },
   "reporting unit": {
     geo: "reporting_unit.parquet",
