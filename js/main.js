@@ -134,15 +134,20 @@ async function load(state) {
 }
 
 async function main() {
+  let step = "startup";
   try {
+    step = "loading database engine";
     setStatus("Loading database engine…");
     await initDB();
 
+    step = "loading map";
     setStatus("Loading map…");
     map = await initMap();
 
+    step = "loading metadata";
     const metadata = await loadMetadata();
     compare = setupComparison({ metadata });
+    step = "loading filters";
     setStatus("Loading filters…");
     const { state, apply } = await setupFilters(metadata, handleChange, parseHash());
     applyFilters = apply;
@@ -151,8 +156,9 @@ async function main() {
     history.replaceState(null, "", stateToHash(state));
     await load(state);
   } catch (err) {
-    console.error(err);
-    setStatus(`Failed to initialize: ${err.message}`, true);
+    console.error(`Initialization failed while ${step}:`, err);
+    const detail = err?.message || String(err);
+    setStatus(`Failed to initialize (${step}): ${detail}`, true);
   }
 }
 

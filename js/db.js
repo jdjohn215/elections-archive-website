@@ -6,9 +6,17 @@ export async function initDB() {
   const bundle = await duckdb.selectBundle(duckdb.getJsDelivrBundles());
   const worker = await duckdb.createWorker(bundle.mainWorker);
   const db = new duckdb.AsyncDuckDB(new duckdb.ConsoleLogger(duckdb.LogLevel.WARNING), worker);
-  await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
+  try {
+    await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
+  } catch (err) {
+    throw new Error(`wasm instantiate failed: ${err?.message || err}`, { cause: err });
+  }
   conn = await db.connect();
-  await conn.query("INSTALL spatial; LOAD spatial;");
+  try {
+    await conn.query("INSTALL spatial; LOAD spatial;");
+  } catch (err) {
+    throw new Error(`spatial extension load failed: ${err?.message || err}`, { cause: err });
+  }
   return conn;
 }
 
