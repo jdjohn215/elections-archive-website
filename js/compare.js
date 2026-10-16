@@ -1,4 +1,4 @@
-import { query, dataUrl } from "./db.js";
+import { query, parquetRef } from "./db.js";
 import { LEVELS, keyOf, votesPath, loadUnitNames, COUNTY_NAMES, countyName } from "./filters.js";
 import { setupUnitFilter } from "./table.js";
 
@@ -239,7 +239,7 @@ export function setupComparison({ metadata }) {
         // vintage; enumerate them from the most recent November file.
         const years = novemberYears(cfg.votesLevel);
         if (years.length === 0) return [];
-        const url = dataUrl(votesPath(cfg.votesLevel, years[0], "NOVEMBER", "spatial"));
+        const url = await parquetRef(votesPath(cfg.votesLevel, years[0], "NOVEMBER", "spatial"));
         const rows = await query(
           `SELECT DISTINCT ${cfg.key} AS k, municipality, ctv, county_fips
            FROM read_parquet('${url}') ORDER BY k`
@@ -277,7 +277,7 @@ export function setupComparison({ metadata }) {
     // District levels: enumerate ids from the most recent November file.
     const years = novemberYears(cfg.votesLevel);
     if (years.length === 0) return [];
-    const url = dataUrl(votesPath(cfg.votesLevel, years[0], "NOVEMBER", integration()));
+    const url = await parquetRef(votesPath(cfg.votesLevel, years[0], "NOVEMBER", integration()));
     const rows = await query(
       `SELECT DISTINCT ${cfg.key} AS k FROM read_parquet('${url}') ORDER BY k`
     );
@@ -307,7 +307,7 @@ export function setupComparison({ metadata }) {
     try {
       for (let i = 0; i < years.length; i++) {
         setStatus(`Loading November ${years[i]} (${i + 1}/${years.length})…`);
-        const url = dataUrl(votesPath(cfg.votesLevel, years[i], "NOVEMBER", integration()));
+        const url = await parquetRef(votesPath(cfg.votesLevel, years[i], "NOVEMBER", integration()));
         const where = cfg.key ? `WHERE ${cfg.key} = ${Number(unitKey)}` : "";
         const part = await query(
           `SELECT contest,

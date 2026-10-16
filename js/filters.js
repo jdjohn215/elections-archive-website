@@ -1,4 +1,4 @@
-import { query, dataUrl, sqlString } from "./db.js";
+import { query, sqlString, parquetRef } from "./db.js";
 
 // Helper: check if a municipality type is a town (towns are county-unique by name).
 function isTown(ctv) {
@@ -98,7 +98,7 @@ export function keyOf(row, keys) {
 }
 
 export async function fetchContests({ year, month, level, integration }) {
-  const path = dataUrl(votesPath(level, year, month, integration));
+  const path = await parquetRef(votesPath(level, year, month, integration));
   const rows = await query(
     `SELECT DISTINCT contest FROM read_parquet('${path}') ORDER BY contest`
   );
@@ -109,10 +109,10 @@ export async function fetchContests({ year, month, level, integration }) {
 // unit_names.parquet is tiny, so load it once and merge names in JS —
 // doing this as a SQL join trips a duckdb-wasm 1.29 runtime error.
 let unitNamesPromise = null;
-export function loadUnitNames() {
+export async function loadUnitNames() {
   unitNamesPromise ??= query(
     `SELECT muni_fips, mcd_fips, municipality, ctv, county_fips
-     FROM read_parquet('${dataUrl("data/geo/unit_names.parquet")}')`
+     FROM read_parquet('${await parquetRef("data/geo/unit_names.parquet")}')`
   ).then((rows) => {
     // Dedupe to one entry per key (file has one row per muni × mcd pair)
     const byMuni = new Map();
@@ -127,7 +127,7 @@ export function loadUnitNames() {
 }
 
 export async function fetchVotes({ year, month, level, contest, integration }) {
-  const path = dataUrl(votesPath(level, year, month, integration));
+  const path = await parquetRef(votesPath(level, year, month, integration));
   const rows = await query(
     `SELECT county_fips, muni_fips, mcd_fips, reporting_unit,
             con_dist, wss_dist, wsa_dist,
@@ -167,7 +167,7 @@ export async function fetchGeo({ year, month, level, integration }) {
   const rows = await query(
     `SELECT ${keySelect},
             ST_AsGeoJSON(ST_GeomFromWKB(geometry)) AS gj
-     FROM read_parquet('${dataUrl("data/" + geoFile)}')
+     FROM read_parquet('${await parquetRef("data/" + geoFile)}')
      ${where}`
   );
   return rows;
@@ -176,7 +176,9 @@ export async function fetchGeo({ year, month, level, integration }) {
 const MONTH_ORDER = { FEBRUARY: 2, APRIL: 4, AUGUST: 8, NOVEMBER: 11 };
 
 export async function loadMetadata() {
-  const resp = await fetch("data/metadata.json");
+  // no-cache: revalidate every load — a heuristic-cached stale copy breaks
+  // all the filters (empty state -> garbage parquet paths)
+  const resp = await fetch("data/metadata.json", { cache: "no-cache" });
   if (!resp.ok) throw new Error("Could not load data/metadata.json");
   return resp.json();
 }
